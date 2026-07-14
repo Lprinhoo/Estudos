@@ -3,9 +3,24 @@ import java.util.Locale;
 
 void main() {
 
-    double xA, xB, xC, yA, yB, yC;
-
     Locale.setDefault(Locale.US);
+
+    showAreaForTwoTriangle();
+
+}
+
+public static double calcularArea(double x, double y, double z) {
+
+    double p = (x + y + z) / 2;
+    double area = Math.sqrt(p * (p-x) * (p-y) * (p-z));
+
+    return area;
+}
+
+public static void showAreaForTwoTriangle() {
+
+    double xA, xB, xC, yA, yB, yC, areaX, areaY;
+
     Scanner sc = new Scanner(System.in);
     System.out.println("Digite os valores do triangulo X");
     xA = sc.nextDouble();
@@ -17,16 +32,15 @@ void main() {
     yB = sc.nextDouble();
     yC = sc.nextDouble();
 
-    System.out.printf("Aréa do triangulo X: %.4f%", calcularArea(xA, xB, xC));
-    System.out.printf("Aréa do triangulo Y: %.4f%", calcularArea(yA, yB, yC));
+    areaX = calcularArea(xA, xB, xC);
+    areaY = calcularArea(yA, yB, yC);
 
-}
+    System.out.printf("Área do triangulo X: %.4f%n", areaX);
+    System.out.printf("Área do triangulo Y: %.4f%n", areaY);
 
-public static double calcularArea(double x, double y, double z) {
+    if (areaX > areaY) System.out.println("A área maior pertence a área X");
+    else if (areaX == areaY) System.out.println("Ambas as áreas são iguais");
+    else System.out.println("A área maior pertence a área Y");
 
-    double p = (x + y + z) / 2;
-    double area = Math.sqrt(p * (p-x) * (p-y) * (p-z));
-
-    return area;
 }
 
