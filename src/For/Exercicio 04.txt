@@ -1,0 +1,30 @@
+// Fazer um programa para ler um número N. Depois leia N pares de números e mostre a divisão do primeiro pelo
+// segundo. Se o denominador for igual a zero, mostrar a mensagem "divisao impossivel".
+
+import java.util.Scanner;
+
+void main() {
+
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("Digite um número: ");
+    int n = sc.nextInt();
+
+    float x = 0;
+    float y = 0;
+
+    for(int i = 0; i < n; i++) {
+
+        System.out.print("Digite um número: ");
+        x = sc.nextFloat();
+        System.out.print("Digite um número: ");
+        y = sc.nextFloat();
+
+        if(y == 0) {
+            System.out.println("Divisão Impossivel");
+        } else {
+            System.out.printf("Resultado da Divisão: %.1f", x / y);
+            System.out.println("");
+        }
+    }
+}
