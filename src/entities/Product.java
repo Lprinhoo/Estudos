@@ -16,7 +16,7 @@ public class Product {
     }
 
     public String toString() {
-        return name + ", R$" + String.format("%.2f", price)
-                    + ", "  + quantity + " Unidades, Total: R$" + String.format("%.2f", totalValueInStock());
+        return "Dados Atualizados: "+ name + ", R$" + String.format("%.2f", price)
+                + ", "  + quantity + " Unidades, Total: R$" + String.format("%.2f", totalValueInStock());
     }
 }

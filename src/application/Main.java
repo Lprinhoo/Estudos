@@ -21,4 +21,11 @@ void main() {
 
     System.out.println(produto.toString());
 
+    System.out.print("Selecione quantos itens você quer remover: ");
+    int x = sc.nextInt();
+
+    produto.quantity -= x;
+
+    System.out.println(produto.toString());
+
 }
