@@ -11,7 +11,7 @@ public class Product {
     public void   addProduct(int quantity) { this.quantity += quantity; }
 
     public void   removeProduct(int quantity) {
-        if(this.quantity != 0 ) quantity -= quantity;
+        if(this.quantity != 0 ) this.quantity -= quantity;
         else System.out.println("Sistema não pode remover um produto zerado");;
     }
 
