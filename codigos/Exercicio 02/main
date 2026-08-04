@@ -1,0 +1,18 @@
+import entities.Rectangle;
+import java.util.Scanner;
+
+void main() {
+
+    Scanner sc = new Scanner(System.in);
+    Rectangle retangulo = new Rectangle();
+
+    System.out.println("Entre com a Altura e Largura do Retangulo: ");
+    retangulo.altura = sc.nextDouble();
+    retangulo.largura = sc.nextDouble();
+
+    System.out.printf("Aréa: %.2f\n", retangulo.Area());
+    System.out.printf("Diagonal: %.2f\n", retangulo.Diagonal());
+    System.out.printf("Perimetro: %.2f\n", retangulo.Perimetro());
+
+
+}

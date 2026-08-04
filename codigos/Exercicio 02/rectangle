@@ -1,0 +1,22 @@
+package entities;
+
+public class Rectangle {
+
+    public double altura;
+    public double largura;
+
+    public double Area() {
+        double area = (largura * altura);
+        return area;
+    }
+
+    public double Perimetro() {
+        double perimetro = (largura + altura) * 2;
+        return perimetro;
+    }
+
+    public double Diagonal() {
+        double diagonal = Math.sqrt(Math.pow(largura, 2) + Math.pow(altura, 2));
+        return diagonal;
+    }
+}
