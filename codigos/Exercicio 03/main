@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import entities.Funcionario;
+
+void main() {
+
+    Scanner sc = new Scanner(System.in);
+    Funcionario funcionario = new Funcionario();
+
+    System.out.println("Vamos cadastrar um funcionario");
+    System.out.print("Primeiro digite o nome: ");
+    funcionario.nome = sc.nextLine();
+    System.out.print("Agora digite o salario: ");
+    funcionario.salario = sc.nextDouble();
+    System.out.print("Agora digite a taxa a ser descontada: ");
+    funcionario.taxa = sc.nextDouble();
+
+    System.out.println(funcionario.toString());
+
+    System.out.print("\nAgora quantos % vamos incrementar: ");
+    double x = sc.nextDouble();
+    funcionario.incrementarSalario(x);
+
+    System.out.println("\nDados Atualizados!" + funcionario.toString());
+
+
+
+}

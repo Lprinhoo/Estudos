@@ -1,0 +1,17 @@
+package entities;
+
+public class Funcionario {
+
+    public String nome;
+    public double taxa;
+    public double salario;
+
+    public double ajusteSalarial() { return salario - taxa; }
+
+    public void incrementarSalario(double percentual) { this.salario = salario * (1 + percentual / 100); }
+
+    public String toString() {
+        return "\nFuncionario: " + nome + "\nSalario: " + String.format("R$%.2f", ajusteSalarial());
+    }
+
+}
