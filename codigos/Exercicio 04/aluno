@@ -1,0 +1,21 @@
+package entities;
+
+public class Aluno {
+
+    public double nota1, nota2, nota3;
+
+    public String Avaliation() {
+
+        double soma = nota1 + nota2 + nota3;
+
+        if(soma >= 60) {
+            return "Nota Final: " + String.format("%.2f", soma)
+                    + "\nPassou!";
+        }
+        else {
+            return "Nota Final: " + String.format("%.2f", soma)
+                    + "\nReprovado!" + "\nFaltam "
+                    + String.format("%.2f", (60 - soma)) + " Pontos";
+        }
+    }
+}
