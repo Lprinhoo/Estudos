@@ -1,0 +1,14 @@
+package entities;
+
+public class CurrencyConverter {
+
+    public static final double taxa = 6;
+
+    public static double Converter(double dolarPrice, double dolarBuy) {
+
+        double IOF   = ((dolarPrice * dolarBuy) * 6) / 100;
+        double reais = (dolarPrice * dolarBuy) + IOF;
+        return reais;
+
+    }
+}

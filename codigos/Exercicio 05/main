@@ -1,0 +1,16 @@
+import java.util.Scanner;
+import entities.CurrencyConverter;
+import java.util.Locale;
+
+void main() {
+
+    Locale.setDefault(Locale.US);
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("What is the dollar price? ");
+    double dolarPrice = sc.nextDouble();
+    System.out.print("How many dollars will be bought? ");
+    double dolarBuy   = sc.nextDouble();
+    System.out.printf("Amount to be paid in reais = %.2f%n", CurrencyConverter.Converter(dolarPrice, dolarBuy));
+
+}
