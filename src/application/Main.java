@@ -8,19 +8,14 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        int quantity;
-        Product produto = new Product();
-
         System.out.println("Entre com os Dados do produto: ");
         System.out.print("Nome: ");
-        produto.name = sc.nextLine();
+        String name = sc.nextLine();
 
         System.out.print("Preço: ");
-        produto.price = sc.nextDouble();
+        double price = sc.nextDouble();
 
-        System.out.print("Quantidade: ");
-        produto.quantity = sc.nextInt();
-        System.out.println("Produto Criado! qual o proximo passo ?");
+        Product produto = new Product(name, price);
 
         while(true) {
             System.out.println("[1] Visualisar Dados [2]Adicionar Quantidade [3]Remover Quantidade [4]Sair");
@@ -33,14 +28,14 @@ public class Main {
                     break;
                 case 2:
                     System.out.print("Selecione quantos itens você quer adicionar: ");
-                    quantity = sc.nextInt();
-                    produto.addProduct(quantity);
+                    int add = sc.nextInt();
+                    produto.addProduct(add);
                     System.out.println("");
                     break;
                 case 3:
                     System.out.print("Selecione quantos itens você quer remover: ");
-                    quantity = sc.nextInt();
-                    produto.removeProduct(quantity);
+                    int menos = sc.nextInt();
+                    produto.removeProduct(menos);
                     System.out.println("");
                     break;
                 case 4:
