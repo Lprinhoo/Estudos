@@ -13,5 +13,7 @@ public class Main {
         Store store = new Store();
         store.createProduct(new Product(sc));
 
+
+
     }
 }
