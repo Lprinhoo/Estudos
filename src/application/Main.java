@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 import entities.Bank;
+import entities.SystemBank;
 import entities.User;
 
 public class Main {
@@ -9,6 +10,6 @@ public class Main {
 
         User user = User.cadastrarConta(sc);
 
-        Bank.mainMenu(user, sc);
+        SystemBank.mainMenu(user, sc);
     }
 }

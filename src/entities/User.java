@@ -30,6 +30,7 @@ public class User {
         return id;
     }
 
+    @Override
     public String toString() {
         return "Número da conta: " + id
                 + "\nTitular: "    + name
@@ -43,9 +44,9 @@ public class User {
         String name = sc.nextLine();
 
         double value = 0.0;
-        boolean i = false;
+        boolean sair = false;
 
-        while(!i) {
+        while(!sair) {
             System.out.println("Deseja depositar um valor inicial?");
             System.out.println("[1]Sim [2]Não");
             int x = sc.nextInt();
@@ -56,16 +57,19 @@ public class User {
                     System.out.print("Entre com o valor a ser depositado\nR$");
                     value = sc.nextDouble();
                     sc.nextLine();
-                    i = true;
+                    sair = true;
                     break;
                 case 2:
                     value = 0.0;
-                    i = true;
+                    sair = true;
                     break;
                 default:
                     System.out.println("Opção Invalida");
             }
         }
+
+        Bank.users.add(new User(name, value));
+
         return new User(name, value);
     }
 
@@ -75,6 +79,11 @@ public class User {
 
     public void sacar(double value) {
         double taxa = 5.00;
-        this.value -= value + taxa;
+
+        if(this.value >= value + taxa) {
+            this.value -= value + taxa;
+        } else {
+            System.out.println("Saldo Insuficiente");
+        }
     }
 }
