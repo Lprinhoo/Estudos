@@ -57,11 +57,10 @@ public class User {
         return id;
     }
 
-    @Override
     public String toString() {
         return "Número da conta: " + id
-                + "\nTitular: " + name
-                + "\nSaldo: R$" + String.format("%.2f", value);
+                + "\nTitular: "    + name
+                + "\nSaldo: R$"    + String.format("%.2f", value);
     }
 
     public void deposito(double value) {

@@ -37,14 +37,12 @@ public class Main {
                     user.sacar(saque);
                     System.out.println(user);
                     break;
-
                 case 3:
                     System.out.print("Digite o valor a ser depositado: R$");
                     double deposito = sc.nextDouble();
                     user.deposito(deposito);
                     System.out.println(user);
                     break;
-
                 case 4:
                     sair = true;
                     System.out.println("Até logo!");
