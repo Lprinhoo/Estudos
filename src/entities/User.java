@@ -1,5 +1,6 @@
 package entities;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class User {
@@ -11,7 +12,7 @@ public class User {
     public User(String name, double value) {
         this.name = name;
         this.value = value;
-        this.id = (int) (Math.random() * 90000) + 10000;
+        this.id = idCreate();
     }
 
     public void setName(String name) {
@@ -68,9 +69,22 @@ public class User {
             }
         }
 
-        Bank.users.add(new User(name, value));
+        User user = new User(name, value);
+        Bank.users.add(user);
 
-        return new User(name, value);
+        return user;
+    }
+
+    public int idCreate() {
+
+        int id = (int) (Math.random() * 90000) + 10000;
+
+        for (int i = 0; id == Bank.idList.get(i); i++) {
+            id = (int) (Math.random() * 90000) + 10000;
+        }
+
+        return id;
+
     }
 
     public void deposito(double value) {

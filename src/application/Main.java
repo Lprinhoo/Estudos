@@ -10,6 +10,8 @@ public class Main {
 
         User user = User.cadastrarConta(sc);
 
-        SystemBank.mainMenu(user, sc);
+        System.out.println(Bank.getUsersID());
+
+        //SystemBank.mainMenu(user, sc);
     }
 }
