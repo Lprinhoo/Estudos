@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class Product{
 
-    public int     quantity;
-    public double  price;
-    public String  name;
+    private String name;
+    private double price;
+    private int quantity;
 
     public Product() {}
 
@@ -32,6 +32,26 @@ public class Product{
         this.quantity = quantity;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
     public double totalValueInStock() { return quantity * price; }
 
     public void addProduct(int quantity) { this.quantity += quantity; }
@@ -40,7 +60,6 @@ public class Product{
         if(this.quantity != 0 ) this.quantity -= quantity;
         else System.out.println("Sistema não pode remover um produto zerado");;
     }
-
 
     public String toString() {
         return name + ", R$" + String.format("%.2f", price)
