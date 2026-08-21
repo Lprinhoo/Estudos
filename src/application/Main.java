@@ -12,6 +12,6 @@ public class Main {
 
         System.out.println(Bank.getUsersID());
 
-        //SystemBank.mainMenu(user, sc);
+        SystemBank.mainMenu(user, sc);
     }
 }

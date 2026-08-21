@@ -76,15 +76,14 @@ public class User {
     }
 
     public int idCreate() {
-
         int id = (int) (Math.random() * 90000) + 10000;
 
-        for (int i = 0; id == Bank.idList.get(i); i++) {
-            id = (int) (Math.random() * 90000) + 10000;
+        if(Bank.idList.size() > 0) {
+            for (int i = 0; id == Bank.idList.get(i); i++) {
+                id = (int) (Math.random() * 90000) + 10000;
+            }
         }
-
         return id;
-
     }
 
     public void deposito(double value) {

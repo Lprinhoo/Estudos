@@ -5,8 +5,8 @@ import java.util.stream.Collectors;
 
 public class Bank {
 
-    public static ArrayList<User> users = new ArrayList<>();
-    public static ArrayList<Integer> idList = getUsersID();
+    protected static ArrayList<User> users = new ArrayList<>();
+    protected static ArrayList<Integer> idList = getUsersID();
 
     public static ArrayList<Integer> getUsersID() {
 
